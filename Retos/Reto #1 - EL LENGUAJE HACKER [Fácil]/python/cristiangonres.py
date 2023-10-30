@@ -7,8 +7,7 @@
 *   (Usa la primera opción de cada transformación. Por ejemplo "4" para la "a")
 */'''
 
-def transform_to_leet(text):
-    leet_dict = {
+leet_dict = {
     'a': '4', 'A': '4',
     'b': '13', 'B': '13',
     'c': '<', 'C': '<',
@@ -36,11 +35,12 @@ def transform_to_leet(text):
     'y': '`/', 'Y': '`/',
     'z': '2', 'Z': '2',
 }
+def transform_to_leet(text):
+    '''función para transformar lenguaje natural a leet'''
     for letter in text:
         if letter in leet_dict:
             text = text.replace(letter, leet_dict[letter])
     return text
 
-text = transform_to_leet(input('Escribe tu texto: \n'))
-print(text)
-
+sentence = transform_to_leet(input('Escribe tu texto: \n'))
+print(sentence)
